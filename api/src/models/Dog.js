@@ -5,43 +5,47 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('dog', {
     id: {
-        type: DataTypes.UUID, //un id alfanumerico
+        type: DataTypes.UUID, 
+        allowNull: false, 
         primaryKey: true,
-        allowNull: false, //para q no este vacio
         defaultValue: DataTypes.UUIDV4,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      //unique: true,
+      unique: true,
     },
-    heightMin: {
+    height_min: {
         type: DataTypes.STRING,
-        allowNull: false,
+        //allowNull: true,
     },
-    heightMax: {
+    height_max: {
         type: DataTypes.STRING,
-        allowNull: false,
+        //allowNull: true,
     },
-    weightMin: {
+    weight_min: {
         type: DataTypes.STRING,
-        allowNull: false,
+        //allowNull: false,
     },
-    weightMax: {
+    weight_max: {
         type: DataTypes.STRING,
-        allowNull: false,
+        //allowNull: false,
     },
-    life_time_min: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    life_time_max: {
-        type: DataTypes.STRING,
-        allowNull: true,
+    // life_time_min: {
+    //     type: DataTypes.STRING,
+    //     //allowNull: true,
+    // },
+    // life_time_max: {
+    //     type: DataTypes.STRING,
+    //     //allowNull: true,
+    // },
+    life_span: {
+      type: DataTypes.STRING,
+     
     },
     image: {
       type: DataTypes.TEXT,
-      allowNull: true,
+      //allowNull: true,
     },
     createdInDb: {
       type: DataTypes.BOOLEAN,
@@ -49,6 +53,6 @@ module.exports = (sequelize) => {
       defaultValue: true,
     },
   },
-  {timestamps: false} //sequelize NO agregue los 2 atributos por defecto: createdAt y updatedAt.
+    {timestamps: false} //sequelize NO agregue los 2 atributos por defecto: createdAt y updatedAt.
   );
 };
