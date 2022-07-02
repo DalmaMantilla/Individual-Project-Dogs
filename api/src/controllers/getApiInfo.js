@@ -37,3 +37,4 @@ const getApiInfo = async (req, res, next) => {
 module.exports = {
     getApiInfo,
 }
+
