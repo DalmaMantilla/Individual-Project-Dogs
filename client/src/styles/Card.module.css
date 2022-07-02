@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&display=swap');
+
+
+.conteiner{
+    background-color: gainsboro;
+    margin: 5px;
+    padding: 10px;
+    width: 370px;
+    height: 550px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.conteiner:hover {
+border-radius: 12px;
+background: #e0e0e0;
+box-shadow:  12px 12px 21px #acacac,
+             -12px -12px 21px #ffffff;
+}
+
+.name {
+    font: 2vw/1.6 'Acme', sans-serif;
+    color: teal;
+    text-decoration: none;
+}
+
+.img {
+    border-radius: 15px;
+}
+
+.temp, .peso {
+    font: 1vw/1.6 'Acme', sans-serif;
+    font-style: italic;
+    color: teal;
+}
