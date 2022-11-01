@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Concert+One&family=Courgette&family=Dangrek&family=Fredoka+One&family=Itim&family=Neucha&family=Pangolin&family=Patrick+Hand&family=Sniglet&display=swap");
+
+* { 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-y:hidden;
+}
+
+:root {
+  --primary: #d6c2a1;
+  --secondary: #714c34ce;
+  --seccion: #d7d9ce;
+  --text: rgba(49, 42, 36, 0.9);
+  --dark2: #050505; 
+} 
+ 
+.background {
+  background-image: url(../../img/fondo_padre.png);
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  margin-left: 6em;
+  margin-top: 4em;
+}
+
+.title {
+  font-size: 50px;
+  font-family: "Sniglet", cursive;
+  margin: 0.1em;
+  color: rgba(49, 42, 36, 0.9);
+  text-shadow: -1px 0 rgb(255, 255, 255), 0 3px rgb(255, 255, 255),
+    1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4em;
+  padding-bottom: 6em;
+  padding-left: 4.5em;
+  padding-right: 4.5em;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+
+.button {
+  --border-right: 8px;
+  --text-stroke-color: rgba(49, 42, 36, 0.9);
+  --animation-color: rgb(164, 135, 125);
+  --fs-size: 2.5em;
+  letter-spacing: 3px;
+  font-size: var(--fs-size);
+  font-family: "Fredoka One", cursive;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover_text {
+  position: absolute;
+  box-sizing:border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.8s;
+  -webkit-text-stroke: 1px var(--animation-color);
+  cursor: pointer;
+}
+
+/* hover */
+.button:hover .hover_text {
+  width: 100%;
+  filter: drop-shadow(0 0 20px var(--animation-color));
+  cursor: pointer;
+}
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 650px) {
+  .container {
+    height: 100%;
+  }
+  
+  
+  .background {
+    margin: 0em;
+    background-repeat: no-repeat;
+    max-height:max-content;
+  }
+
+  .section {
+    margin-top: 40px;
+    padding: 80px;
+    width: 50px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .button {
+    font-size: 25px;
+  }
+
+  .btn span {
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 40px;
+  }
+}

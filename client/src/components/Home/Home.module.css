@@ -2,7 +2,7 @@
 
 
 .container {
-  background-image: url("../img/containerHome.jpg");
+  background-image: url("../../img/containerHome.jpg");
   height: 100vh;
   width: 100%;
   overflow: auto;
