@@ -13,9 +13,7 @@ import Card from '../Card/Card'
 import s from "../Home/Home.module.css";
 import style from "../Home/Home.module.css";
 import { Link } from "react-router-dom";    
-import img from "../../img/dogcreated.png";
 import Paginated from "../Paginated/Paginated";
-import Loader from '../Loader/Loader'
 
 
 export default function Home() {
@@ -99,7 +97,7 @@ export default function Home() {
                 <div className={s.row}>
                     <select className={s.select} onchange={(e) => handleSort(e)}>
                         <option value="" disabled selected>
-                            Ordenar Alfabeticamente
+                            Alphabetical Order
                         </option>
                         <option value="asc">A-Z</option>
                         <option value="desc">Z-A</option>
@@ -107,17 +105,17 @@ export default function Home() {
 
                     <select className={s.select} onchange={(e) => handleSortWeight(e)}>
                         <option value="" disabled selected>
-                            Ordenar por Peso
+                            Order by Weight
                         </option>
-                        <option value='asc'>Ascendente</option>
-                        <option value='desc'>Descendente</option>
+                        <option value='asc'>Heavier</option>
+                        <option value='desc'>Lighter</option>
                     </select>
                 </div>
                 {/*------------------- FILTRAR-----------------------*/}
                 <div className={s.row2}>
                     <select className={s.select} onchange={(e) => handleFilterByTemperament(e)}>
                         <option value="" disabled selected>
-                            Filtrar por Temperamento
+                            Filter by Temperament
                         </option>
                         <option value="all">Todos</option>
                         {allTemperaments.map((temp) => (
@@ -126,30 +124,35 @@ export default function Home() {
                     </select>
                     <select className={s.select} onchange={(e) => handleFilterCreated(e)}>
                         <option value="" disabled selected>
-                            Filtrar por Creacion - existentes
+                            Filter by Createds
                         </option>
-                        <option value="all">Todos</option>
-                        <option value="api">Por Api</option>
-                        <option value="created">Por Base de Datos</option>
+                        <option value="all">All</option>
+                        <option value="api">By API</option>
+                        <option value="created">By Database</option>
                     </select>
                 </div>
                 <button className={s.btn} onClick={(e) => handleClick(e)}> 
-                    Recargar Perros
+                    Reload Dogs
                 </button>
-            </div>
-         
+            </div>         
             <Paginated
                 dogsPerPage={dogsPerPage}
                 allDogs={allDogs.length}
                 currentPage={currentPage}
                 pagination={pagination}
-            />
-           
+            />         
             <div className={s.card}>
                <ul className={s.grid}>
                         {" "}
-                        {!currentDogs.length > 0 ? (
-                    <div className={style.div}></div>
+                    {!currentDogs.length > 0 ? (
+                    <div className={s.div}>
+                    <p className={s.loading}>Loading...</p>
+                    <img
+                      src={
+                        "https://i0.wp.com/thumbs.gfycat.com/ThankfulPlushAtlanticspadefish-max-1mb.gif"
+                      }
+                    />
+                  </div>
                     ) :
                         currentDogs.map((d) => {
                             return (
@@ -167,38 +170,12 @@ export default function Home() {
                                             max_weight={d.max_weight}
                                             min_weight={d.min_weight}
                                         />
-
                                     </Link>
                                 </div>
                             );
-                    })}
-                </ul>
+                        })}
+                    </ul>
             </div>
-
-
-
-{/* 
-             {currentDogs.length > 0 ? (
-          currentDogs.map((d) => {
-            return (
-              <div key={d.id} className={style.card}>
-                <Card
-                  image={d.image ? d.image : img}
-                  name={d.name}
-                  temperament={d.temperament}
-                  min_weight={d.min_weight}
-                  max_weight={d.max_weight}
-                  life_span={d.life_span}
-                  key={d.id}
-                />
-              </div>
-            );
-          })
-        ) : (
-          <div className={style.loader}>
-            <Loader />
-          </div>
-        )} */}
         </div>
     );
 }
