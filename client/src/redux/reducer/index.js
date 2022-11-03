@@ -12,7 +12,8 @@ function rootReducer(state=initialState, action){
         case 'GET_DOGS':
             return { //retorna un nuevo estado
                 ...state,
-                dogs: action.payload
+                dogs: action.payload, //tiene todos los perritos
+                allDogs: action.payload //copia de todos los perritos, este se filtrara
             };
         
         case "GET_TEMPERAMENTS":
@@ -56,11 +57,46 @@ function rootReducer(state=initialState, action){
                 ...state, 
                 dogs: sortName
             }
+
+        case "ORDER_BY_WEIGHT":
+            let sortWeight = action.payload === 'weightasc' ?      
+            state.dogs.sort(function (a, b){  
+                return b.min_weight - a.min_weight;
+            }) :
+            state.dogs.sort(function(a, b){
+                return a.min_weight - b.min_weight;
+            })
+            return{
+            ...state,
+            dogs: sortWeight
+            }
     
-        default :
-            return {...state}           
-    }
-    
+        case "FILTER_CREATED":
+            const allDogsCreated = state.allDogs;
+            const createdFilter = action.payload === 'created' ? 
+            allDogsCreated.filter(el => el.userCreated)
+            : allDogsCreated.filter(el => !el.userCreated)
+            //console.log(allDogs)
+            return {
+                ...state,
+                dogs: action.payload === "all" ? allDogsCreated : createdFilter
+            };
+            
+        case "FILTER_TEMPERAMENT":
+            const allDogs = state.allDogs;
+            const temperamentsFilter = action.payload === "all" ?
+            allDogs : allDogs.filter(el => {
+                return el.temperament?.split(", ").includes(action.payload)
+            })
+            console.log('AQUI ESTAN LOS PÑERROS', allDogs)
+            console.log('Aqui van los temp',temperamentsFilter)
+            return {        
+                ...state,
+                dogs: temperamentsFilter
+            }
+        default : 
+            return {...state}
+        }
 }
 
 

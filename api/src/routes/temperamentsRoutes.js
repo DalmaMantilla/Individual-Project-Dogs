@@ -8,8 +8,7 @@ temperamentsRoutes = Router();
 temperamentsRoutes.get("/temperaments", async function (req, res) {
     try {
     const apiInfo = await axios(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`); 
-    const getTemp = await apiInfo.data.map(e => e.temperament);
-
+    const getTemp = await apiInfo.data.map((e) => e.temperament);
     const nvoArrayTemp = getTemp.filter(Boolean);
     const nvoArrayTemp1 = nvoArrayTemp 
         .join(', ')
@@ -19,6 +18,7 @@ temperamentsRoutes.get("/temperaments", async function (req, res) {
     const nvoArrayTemp2 = new Set(nvoArrayTemp1);
     let result = [...nvoArrayTemp2] 
     //console.log(result);
+
 
     //Por cada elemento del array result creo un nuevo temperamento y los guardo en DB
     result.forEach( temp => {
@@ -30,7 +30,7 @@ temperamentsRoutes.get("/temperaments", async function (req, res) {
     //Traigo todos los temperamentos
     const getTemperament = await Temperament.findAll();
     res.status(200).send(getTemperament)
-    //console.log(getTemperament)
+    console.log('Temperamentooooooooooos',getTemperament)
 
     } catch(error){
         next(error);

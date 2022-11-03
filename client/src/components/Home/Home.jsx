@@ -3,28 +3,29 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { getDogs,
     orderByName,
-    filterCreated,
+    filterCreated,                                                                                                              
     orderByWeight,
     getTemperaments,
     filterTemperament, }
- from "../../redux/actions";
+ from "../../redux/actions/index";
 
 import Card from '../Card/Card'
-import s from "../Home/Home.module.css";
 import style from "../Home/Home.module.css";
 import { Link } from "react-router-dom";    
 import Paginated from "../Paginated/Paginated";
+import Header from "../Header/Header";
 
 
 export default function Home() {
     const dispatch = useDispatch();
+    const [order, setOrder] = useState("");
 
     const allDogs = useSelector((state) => state.dogs)
     //console.log(allDogs, 'ARRAY DE PERROS')
     const allTemperaments = useSelector((state) => state.temperaments);
 
     //----------------PAGINADO----------------------------------------
-    const [order, setOrder] = useState("");
+    
     const [currentPage, setCurrentPage] = useState(1);//1
     const [dogsPerPage, setDogsPerPage] = useState(8);//8
     const indexOfLastDog = currentPage * dogsPerPage;//8
@@ -48,17 +49,18 @@ export default function Home() {
         e.preventDefault();
         dispatch(getDogs());
         setCurrentPage(1);
-       //setOrder(e.target.value);
+        setOrder(e.target.value);
     }
     
 
     //---ORDENAMIENTOS------------------------------------
     //---por nombre--------------
     function handleSort(e){
-        e.preventDefault(e);
+        e.preventDefault();
         dispatch(orderByName(e.target.value));
         setCurrentPage(1);
         setOrder(`Ordered ${e.target.value}`);
+        
     }
     //---por peso----------------
     function handleSortWeight(e){
@@ -79,51 +81,49 @@ export default function Home() {
     }
     //---por temperamento-------
     function handleFilterByTemperament(e){
-        e.preventDefault();
+        e.preventDefault(e);
         dispatch(filterTemperament(e.target.value));
         setCurrentPage(1);
         setOrder(`Ordered ${e.target.value}`);
+        console.log('me trajo los temmmmmp')
     }
 
 
     return (
-        <div className={s.container}>
-            {/*<NavBar/>*/}
-            <div className={s.title}>
-                <h1>Tienda de los Perritos</h1>
-            </div> 
+        <div className={style.container}>
+            <Header/>
             <div>
                 {/*------------------- ORDENAR ALFABETICAMENTE Y PESO-----------------------*/}
-                <div className={s.row}>
-                    <select className={s.select} onchange={(e) => handleSort(e)}>
-                        <option value="" disabled selected>
+                <div className={style.row}>
+                    <select className={style.select} onChange={(e) => handleSort(e)}>
+                        <option hidden>
                             Alphabetical Order
                         </option>
                         <option value="asc">A-Z</option>
                         <option value="desc">Z-A</option>
                     </select>
 
-                    <select className={s.select} onchange={(e) => handleSortWeight(e)}>
-                        <option value="" disabled selected>
+                    <select className={style.select} onChange={(e) => handleSortWeight(e)}>
+                        <option hidden>
                             Order by Weight
                         </option>
-                        <option value='asc'>Heavier</option>
-                        <option value='desc'>Lighter</option>
+                        <option value='weightasc'>Heavier</option>
+                        <option value='weightdesc'>Lighter</option>
                     </select>
                 </div>
                 {/*------------------- FILTRAR-----------------------*/}
-                <div className={s.row2}>
-                    <select className={s.select} onchange={(e) => handleFilterByTemperament(e)}>
-                        <option value="" disabled selected>
+                <div className={style.row2}>
+                    <select className={style.select} onChange={(e) => handleFilterByTemperament(e)}>
+                        <option hidden>
                             Filter by Temperament
                         </option>
                         <option value="all">Todos</option>
                         {allTemperaments.map((temp) => (
-                            <option key={temp.id} name={temp.name}>{temp.name}</option>   
+                            <option name={temp.name} key={temp.id} >{temp.name}</option>   
                         ))}
                     </select>
-                    <select className={s.select} onchange={(e) => handleFilterCreated(e)}>
-                        <option value="" disabled selected>
+                    <select className={style.select} onChange={(e) => handleFilterCreated(e)}>
+                        <option hidden>
                             Filter by Createds
                         </option>
                         <option value="all">All</option>
@@ -131,7 +131,7 @@ export default function Home() {
                         <option value="created">By Database</option>
                     </select>
                 </div>
-                <button className={s.btn} onClick={(e) => handleClick(e)}> 
+                <button className={style.btn} onClick={(e) => handleClick(e)}> 
                     Reload Dogs
                 </button>
             </div>         
@@ -141,12 +141,12 @@ export default function Home() {
                 currentPage={currentPage}
                 pagination={pagination}
             />         
-            <div className={s.card}>
-               <ul className={s.grid}>
+            <div className={style.card}>
+               <ul className={style.grid}>
                         {" "}
                     {!currentDogs.length > 0 ? (
-                    <div className={s.div}>
-                    <p className={s.loading}>Loading...</p>
+                    <div className={style.div}>
+                    <p className={style.loading}>Loading...</p>
                     <img
                       src={
                         "https://i0.wp.com/thumbs.gfycat.com/ThankfulPlushAtlanticspadefish-max-1mb.gif"
@@ -156,9 +156,10 @@ export default function Home() {
                     ) :
                         currentDogs.map((d) => {
                             return (
-                                <div className={style.card}>
+                                <div key={d.id} className={style.card}>
                                     <Link to={`/home/${d.id}`}>
                                         <Card
+                                            key={d.id}
                                             className={style.card}
                                             name={d.name}
                                             image={

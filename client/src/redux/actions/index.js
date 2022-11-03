@@ -25,16 +25,60 @@ export function getTemperaments(){
     }
 }
 
-//-------ORDENAR----------------------------------------
+export function getDetail (id) {
+    return async function (dispatch) {
+        try {
+            var json = await axios.get(`/dogs/${id}`);
+            return dispatch ({
+                type: "GET_DETAILS",
+                payload: json.data
+            })
+        }
+        catch(error) {
+            console.log(error)
+        }
+    }
+}
+
+export function getClean () {
+    return{
+        type: "GET_CLEAN",
+        payload: []
+    }
+}
+
+export function searchDogs(search) {
+    return function (dispatch) {
+    axios.get("/dogs?name=" + search)
+    .then((dogs => {
+        dispatch({
+            type: "SEARCH_DOGS",
+            payload: dogs.data
+        })
+    }))
+    
+    .catch(() => {
+        alert("Doggie not found!")
+    })
+    }
+}
+
+export function postDog (payload) {
+    return async function(dispatch) {
+        const response = await axios.post("/post", payload);
+        //console.log("soy", response.temperament[1])
+        return response;
+    }
+}
+
+
+//-------ORDER----------------------------------------
 export function orderByName(payload){
     return {
         type: 'ORDER_BY_NAME',
         payload
     }
 }
-
-
-
 
 
 export function orderByWeight(payload){
@@ -46,9 +90,6 @@ export function orderByWeight(payload){
 }
 
 
-
-
-
 //------------------------FILTERS----------------------------
 export function filterCreated(payload){ 
     return {    
@@ -56,6 +97,7 @@ export function filterCreated(payload){
         payload
     }
 }
+
 
 export function filterTemperament(payload){
     return {

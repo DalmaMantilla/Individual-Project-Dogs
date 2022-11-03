@@ -12,17 +12,18 @@ const getApiInfo = async (req, res, next) => {
             return {
                 id: e.id,
                 name: e.name,
-                height_min: e.height.metric.split(" - ")[0] && e.height.metric.split(" - ")[0],
-                height_max: e.height.metric.split(" - ")[1] && e.height.metric.split(" - ")[1],
+                min_height: e.height.metric.split(" - ")[0] && e.height.metric.split(" - ")[0],
+                min_height: e.height.metric.split(" - ")[1] && e.height.metric.split(" - ")[1],
                 // weight_min: e.weight.metric.split(" - ")[0] !== "NaN" 
                 //             ? e.weight.metric.split(" - ")[0]
                 //             : 6,
-                weight_min: e.weight.metric.split(" - ")[0] && e.weight.metric.split(" - ")[0],
-                weight_max: e.weight.metric.split(" - ")[1] && e.weight.metric.split(" - ")[1],
+                min_weight: e.weight.metric.split(" - ")[0] && e.weight.metric.split(" - ")[0],
+                max_weight: e.weight.metric.split(" - ")[1] && e.weight.metric.split(" - ")[1],
                 // life_time_min: e.life_span.split(" - ")[0] && e.life_span.split(" - ")[0],
                 // life_time_max: e.life_span.split(" - ")[1] && e.life_span.split(" - ")[1],
                 life_span: e.life_span,
                 temperament: e.temperament ? e.temperament : null,
+                
                 image: e.image.url,
             }
         });

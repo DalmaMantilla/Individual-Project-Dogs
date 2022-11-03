@@ -56,26 +56,26 @@ dogsRoutes.get('/dogs/:id', async(req,res,next) => {
 dogsRoutes.post("/dogs", async (req, res, next) => {
     let {
         name,
-        height_min,
-        height_max,
-        weight_min, 
-        weight_max,
+        min_height,
+        max_height,
+        min_weight, 
+        max_weight,
         life_span,
         temperament, //buscar donde estan todos los temperametos 
         createdInDb,
     } = req.body;
     //console.log(req.body, 'DEBEN LLEGAR DEL BODY')
       
-    if(!name || !height_min || !height_max || !weight_min || !weight_max || !temperament){
+    if(!name || !min_height || !max_height || !min_weight || !max_weight || !temperament){
         return res.status(404).send('Faltan datos obligatorios')
     }
     try {
         let dogCreated = await Dog.create({
             name,
-            height_min,
-            height_max,
-            weight_min,
-            weight_max,
+            min_height,
+            max_height,
+            min_weight, 
+            max_weight,
             life_span,
             createdInDb: true  
           });
@@ -98,11 +98,6 @@ dogsRoutes.post("/dogs", async (req, res, next) => {
 
 
 
-
-
-
-
-      
 
 //---------------------RUTAS ADICIONALES---------------------
 //EDITAR EL PERRO, busca por su id para editar
@@ -155,10 +150,6 @@ dogsRoutes.delete('/dogs/delete/:id', async (req, res, next) => {
     next(error);
   }
 })
-
-
-
-
 
 
 module.exports = dogsRoutes;
