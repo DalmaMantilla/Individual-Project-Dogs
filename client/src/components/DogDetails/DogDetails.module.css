@@ -1,70 +1,89 @@
-body {
-  background-image: url("https://img.freepik.com/vector-gratis/patron-costuras-huellas-perros-colores_429461-332.jpg?w=740");
-}
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Concert+One&family=Courgette&family=Dangrek&family=Fredoka+One&family=Itim&family=Neucha&family=Pangolin&family=Patrick+Hand&family=Sniglet&display=swap");
 
-.contiener {
-  height: 100vh;
+
+.container {
+  background-repeat: no-repeat;
+  background: url("../../img/bg_Details.png");
+  background-size: cover;
+  position: absolute;
+  overflow-y: scroll;
+  height: 100%;
   width: 100%;
-  overflow: auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  padding: auto;
 }
 
 .title {
-  font: bold 7.5vw/1.6 "Acme", sans-serif;
-  margin: 0;
-  padding: auto;
-  color: white;
-  font-size: 40px;
-  letter-spacing: 5px;
-  text-shadow: -1px -1px 0px #f4511e, 3px 3px 0px gainsboro, 6px 6px 0px teal;
+  font-size: 2.8125rem;
+  font-family: "Sniglet", cursive;
+  margin: 0.1em;
+  color: rgba(49, 42, 36, 0.9);
+  text-shadow: -1px 0 rgb(255, 255, 255), 0 0px rgb(255, 255, 255),
+    1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
 }
 
 .text {
   margin: auto;
   padding: auto;
-  font:  7.5vw/1.6 "Acme", sans-serif;
-  color: teal;
-  font-size: 20px;
+  color: rgb(60, 68, 66);
+  font-size: 1.2em;
   padding: 2%;
 }
 
 .card {
-  background-color: gainsboro;
-  width: 60%;
-  height: 90%;
+  background-color: rgb(228, 210, 203);
+  width: 50%;
+  height: 87%;
   margin: auto;
   border-radius: 15px;
-}
+  
+} 
 
 .img {
   width: 50%;
   height: 50%;
   border-radius: 15px;
-}
+} 
 
 
-.btn {
-  width: 20%;
-  background-color: burlywood;
+.btn_createDog {
+  width: 10%;
+  background-color: rgb(159, 143, 123);
   color: white;
   padding: 10px 10px;
-  margin: auto;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 2%;
-  font: 1vw "Acme", sans-serif;
+  margin: 1%;
+  font-family: "Sniglet", cursive;
+  font-size: 15px;
 }
 
-.btn:hover {
-  background-color: rgb(156, 130, 96);
+
+.btn_createDog:hover {
+  background-color: rgb(163, 132, 92);
   transform: scale(1.1);
   cursor: pointer;
 }
+
+.btn_home {
+  width: 10%;
+  background-color: rgb(159, 143, 123);
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 1%;
+  font-family: "Sniglet", cursive;
+  font-size: 15px;
+}
+
+
+.btn_home:hover {
+  background-color: rgb(163, 132, 92);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 
 .loading {
   font: bold 7.5vw/1.6 "Acme", sans-serif;
@@ -79,11 +98,11 @@ body {
  align-items: center;
  flex-direction: row-reverse;
  justify-content: stretch;
- margin: 4%;
+ margin: 3%;
  padding: auto;
 }
 
-.bn {
+.btn_delete {
   width: 90%;
   background-color: burlywood;
   color: white;
@@ -96,8 +115,53 @@ body {
   font: 1vw "Acme", sans-serif;
 }
 
-.bn:hover {
+.btn_delete:hover {
   background-color: rgb(156, 130, 96);
   transform: scale(1.1);
   cursor: pointer;
+}
+
+
+@media only screen and (max-width: 650px) {
+
+  .img {
+    padding-top: 2.5em;
+    width: 60%;
+    height: 40%;
+    margin: -20px 0px 30px 0px;
+  }
+
+  .card {
+    width: 60%;
+    height: 80%;
+    background-color: rgba(245, 245, 245, 0.6);
+ 
+  }
+
+  .title {
+    font-size: 1.8em;
+  } 
+  
+  .text {
+    font-size: 1em;
+  }
+
+  .container {
+    background-image: url(../../img/bg_Detail_Responsive.png)
+  }
+    
+  .btn_home {
+    width: 20%;
+    margin: 3%;
+    font-size: 8px;
+    padding: 5px 5px;
+  }
+
+  .btn_createDog {
+    width: 20%;
+    margin: 3%;
+    font-size: 8px;
+    padding: 5px 5px;
+  }
+  
 }

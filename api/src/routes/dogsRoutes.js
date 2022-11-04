@@ -53,7 +53,7 @@ dogsRoutes.get('/dogs/:id', async(req,res,next) => {
 
 
 
-dogsRoutes.post("/dogs", async (req, res, next) => {
+dogsRoutes.post("/createDog", async (req, res, next) => {
     let {
         name,
         min_height,

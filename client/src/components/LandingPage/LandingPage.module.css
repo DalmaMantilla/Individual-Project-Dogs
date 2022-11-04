@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Concert+One&family=Courgette&family=Dangrek&family=Fredoka+One&family=Itim&family=Neucha&family=Pangolin&family=Patrick+Hand&family=Sniglet&display=swap");
 
 * { 
   box-sizing: border-box;
@@ -6,6 +5,7 @@
   margin: 0;
   overflow-y:hidden;
 }
+
 
 :root {
   --primary: #d6c2a1;
@@ -15,17 +15,24 @@
   --dark2: #050505; 
 } 
  
-.background {
-  background-image: url(../../img/fondo_padre.png);
+
+.bg_container {
+  background-image: url(../../img/bg_Landing.png);
   height: 100vh;
   width: 100%;
 }
 
-.container {
+
+.section {
   display: flex;
-  margin-left: 6em;
-  margin-top: 4em;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8em;
+  padding-bottom: 6em;
+  padding-left: 1.5em;
+  padding-right: 35.5em;
 }
+
 
 .title {
   font-size: 50px;
@@ -36,15 +43,6 @@
     1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 4em;
-  padding-bottom: 6em;
-  padding-left: 4.5em;
-  padding-right: 4.5em;
-}
 
 .button {
   display: flex;
@@ -71,7 +69,8 @@
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
-.hover_text {
+
+.hover_text_button {
   position: absolute;
   box-sizing:border-box;
   content: attr(data-text);
@@ -85,8 +84,9 @@
   cursor: pointer;
 }
 
+
 /* hover */
-.button:hover .hover_text {
+.button:hover .hover_text_button {
   width: 100%;
   filter: drop-shadow(0 0 20px var(--animation-color));
   cursor: pointer;
@@ -95,22 +95,18 @@
 
 /*RESPONSIVE*/
 @media only screen and (max-width: 650px) {
-  .container {
-    height: 100%;
-  }
   
-  
-  .background {
-    margin: 0em;
-    background-repeat: no-repeat;
-    max-height:max-content;
+  .bg_container {
+    background-image: url(../../img/bg_LandingPage_Responsive.png);
+    height: 100vh;
+    width: 100%;
   }
 
   .section {
-    margin-top: 40px;
-    padding: 80px;
-    width: 50px;
+    margin-top: 230px;
+    padding: 15px;
   }
+
 
   .title {
     font-size: 30px;
