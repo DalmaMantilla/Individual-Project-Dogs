@@ -31,8 +31,9 @@ export function getDetail (id) {
             var json = await axios.get(`/dogs/${id}`);
             return dispatch ({
                 type: "GET_DETAILS",
-                payload: json.data
+                payload: json.data,
             })
+             
         }
         catch(error) {
             console.log(error)

@@ -85,7 +85,7 @@ export default function Home() {
         dispatch(filterTemperament(e.target.value));
         setCurrentPage(1);
         setOrder(`Ordered ${e.target.value}`);
-        console.log('me trajo los temmmmmp')
+        // console.log('me trajo los temmmmmp')
     }
 
 
@@ -159,8 +159,8 @@ export default function Home() {
                                 <div key={d.id} className={style.card}>
                                     <Link to={`/home/${d.id}`}>
                                         <Card
-                                            key={d.id}
                                             className={style.card}
+                                            key={d.id}
                                             name={d.name}
                                             image={
                                             d.image
@@ -170,6 +170,7 @@ export default function Home() {
                                             temperament={d.temperament}
                                             max_weight={d.max_weight}
                                             min_weight={d.min_weight}
+                                            
                                         />
                                     </Link>
                                 </div>

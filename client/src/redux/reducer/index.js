@@ -4,8 +4,9 @@ const initialState = {
     allDogs: [],
     temperaments: [],
     detail: []
-   
 }
+
+
 
 function rootReducer(state=initialState, action){
     switch(action.type){
@@ -27,6 +28,7 @@ function rootReducer(state=initialState, action){
                 ...state,
                 detail: action.payload
             };
+            
         case "GET_CLEAN":
             return{
                 ...state,
@@ -88,8 +90,8 @@ function rootReducer(state=initialState, action){
             allDogs : allDogs.filter(el => {
                 return el.temperament?.split(", ").includes(action.payload)
             })
-            console.log('AQUI ESTAN LOS PÑERROS', allDogs)
-            console.log('Aqui van los temp',temperamentsFilter)
+            // console.log('AQUI ESTAN LOS PÑERROS', allDogs)
+            // console.log('Aqui van los temp',temperamentsFilter)
             return {        
                 ...state,
                 dogs: temperamentsFilter
@@ -97,9 +99,8 @@ function rootReducer(state=initialState, action){
         default : 
             return {...state}
         }
+        
 }
-
-
 
 
 export default rootReducer;
