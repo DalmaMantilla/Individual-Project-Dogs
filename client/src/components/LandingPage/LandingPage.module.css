@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Concert+One&family=Courgette&family=Dangrek&family=Fredoka+One&family=Itim&family=Neucha&family=Pangolin&family=Patrick+Hand&family=Sniglet&display=swap");
+
 
 * { 
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  overflow-y:hidden;
+
 }
 
 
@@ -16,11 +18,23 @@
 } 
  
 
-.bg_container {
+/* .bg_container {
   background-image: url(../../img/bg_Landing.png);
-  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  
+} */
+
+.bg_container {
+  background-repeat: no-repeat;
+  background: url(../../img/bg_Landing.png);
+  background-size: cover;
+  position: absolute;
+  overflow-y: scroll;
+  height: 100%;
   width: 100%;
 }
+
 
 
 .section {
@@ -31,6 +45,8 @@
   padding-bottom: 6em;
   padding-left: 1.5em;
   padding-right: 35.5em;
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -109,11 +125,11 @@
 
 
   .title {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .button {
-    font-size: 25px;
+    font-size: 40px;
   }
 
   .btn span {

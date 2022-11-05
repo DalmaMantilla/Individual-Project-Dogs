@@ -13,7 +13,8 @@ import Card from '../Card/Card'
 import style from "../Home/Home.module.css";
 import { Link } from "react-router-dom";    
 import Paginated from "../Paginated/Paginated";
-import Header from "../Header/Header";
+import Header from '../Header/Header'
+
 
 
 export default function Home() {
@@ -131,7 +132,7 @@ export default function Home() {
                         <option value="created">By Database</option>
                     </select>
                 </div>
-                <button className={style.btn} onClick={(e) => handleClick(e)}> 
+                <button className={style.btn_reload} onClick={(e) => handleClick(e)}> 
                     Reload Dogs
                 </button>
             </div>         
