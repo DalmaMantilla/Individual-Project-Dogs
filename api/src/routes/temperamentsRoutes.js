@@ -12,7 +12,7 @@ temperamentsRoutes.get("/temperaments", async function (req, res) {
     const nvoArrayTemp = getTemp.filter(Boolean);
     const nvoArrayTemp1 = nvoArrayTemp 
         .join(', ')
-        .trim() 
+        .trim() //elimina caracteres blancos iniciales y finales de la cadena, devuelve una copia de la misma
         .split(', ')
         .sort();
     const nvoArrayTemp2 = new Set(nvoArrayTemp1);

@@ -1,4 +1,5 @@
 import axios from "axios";
+const Swal = require('sweetalert2')
 
 
 //conecto el front conb el back
@@ -25,6 +26,7 @@ export function getTemperaments(){
     }
 }
 
+
 export function getDetail (id) {
     return async function (dispatch) {
         try {
@@ -41,6 +43,7 @@ export function getDetail (id) {
     }
 }
 
+
 export function getClean () {
     return{
         type: "GET_CLEAN",
@@ -48,21 +51,28 @@ export function getClean () {
     }
 }
 
+
 export function searchDogs(search) {
     return function (dispatch) {
-    axios.get("/dogs?name=" + search)
-    .then((dogs => {
-        dispatch({
-            type: "SEARCH_DOGS",
-            payload: dogs.data
+        axios.get("/dogs?name=" + search)
+        .then((dogs => {
+            dispatch({
+                type: "SEARCH_DOGS",
+                payload: dogs.data
+            })
+        }))
+        .catch(() => {
+            // alert('Dog no found!');
+            Swal.fire({
+                icon: 'error',
+                title: 'Dog no found!',
+                width: 300,    
+              })
+              
         })
-    }))
-    
-    .catch(() => {
-        alert("Doggie not found!")
-    })
     }
 }
+   
 
 export function postDog (payload) {
     return async function(dispatch) {
@@ -101,6 +111,7 @@ export function filterCreated(payload){
 
 
 export function filterTemperament(payload){
+    //En payload llega lo que yo le mando desde el componente
     return {
         type: "FILTER_TEMPERAMENT",
         payload

@@ -1,28 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import s from "../Header/Header.module.css";
+import style from "../Header/Header.module.css";
 import  SearchBar  from "../SearchBar/SearchBar";
-import home from "../../img/home.png";
+
 
 export default function Header() {
   return (
     <header>
-      <div className={s.header}>
+      <div className={style.header}>
         <NavLink to="/">
-          <p className={s.text}>Inicio</p>
+          <p className={style.text}>Inicio</p>
         </NavLink>
-        <NavLink to="/">
-          <p className={s.text}>Home</p>
+        <NavLink to="/home">
+          <p className={style.text}>Home</p>
         </NavLink>
         <NavLink to="/post">
-          <p className={s.text}>Create Dog</p>
+          <p className={style.text}>Create Dog</p>
         </NavLink>
 
         <NavLink to="/about">
-          <p className={s.text}>About</p>
+          <p className={style.text}>About</p>
         </NavLink>
 
-        <SearchBar></SearchBar>
+        <SearchBar/>
       </div>
     </header>
   );

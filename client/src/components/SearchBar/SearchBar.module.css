@@ -11,7 +11,7 @@
     width: 200px;
     margin-top: -25px;
     padding: 6px 10px;
-    font-size: 15px;
+    font-size: .9375em;
     border-radius: 5px;
     border: none;
     font-family: "Sniglet", cursive;
@@ -30,7 +30,7 @@
 .btn_lupa {
     float: right;
     background: none;
-    font-size: 20px;
+    font-size: 1.25em;
     border: none;
     cursor: pointer;
     margin-top: -2px;
@@ -43,9 +43,13 @@
 
 
 @media only screen and (max-width: 650px) {
-    .nav {
-       
-        display: flex;
-       
+    .input {
+        width: 100px;
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .btn_lupa {
+        font-size: 18px;
     }
 }

@@ -112,16 +112,17 @@ export default function Home() {
                         <option value='weightdesc'>Lighter</option>
                     </select>
                 
-                    {/*------------------- FILTRAR-----------------------*/}
+                {/*------------------- FILTRAR-----------------------*/}
+                {/* <div className={style.row2}> */}
                 <div className={style.row2}>
                     <select className={style.select} onChange={(e) => handleFilterByTemperament(e)}>
                         <option hidden>
                             Filter by Temperament
                         </option>
                         <option value="all">Todos</option>
-                        {allTemperaments.map((temp) => (
-                            <option name={temp.name} key={temp.id} >{temp.name}</option>   
-                        ))}
+                            {allTemperaments.map((temp) => (
+                                <option name={temp.name} key={temp.id} >{temp.name}</option>   
+                            ))}
                     </select>
                     <select className={style.select} onChange={(e) => handleFilterCreated(e)}>
                         <option hidden>
@@ -137,26 +138,28 @@ export default function Home() {
                 <button className={style.btn_reload} onClick={(e) => handleClick(e)}> 
                     Reload Dogs
                 </button>
-            </div>         
-            <Paginated
-                dogsPerPage={dogsPerPage}
-                allDogs={allDogs.length}
-                currentPage={currentPage}
-                pagination={pagination}
-            />         
-            <div className={style.card}>
-               <ul className={style.grid}>
+                </div> 
+
+                <Paginated
+                    dogsPerPage={dogsPerPage}
+                    allDogs={allDogs.length}
+                    currentPage={currentPage}
+                    pagination={pagination}
+                />  
+
+                <div className={style.card}>
+                    <ul className={style.grid}>
                         {" "}
-                    {!currentDogs.length > 0 ? (
-                    <div className={style.div}>
-                    <p className={style.loading}>Loading...</p>
-                    <img
-                      src={
-                        "https://i0.wp.com/thumbs.gfycat.com/ThankfulPlushAtlanticspadefish-max-1mb.gif"
-                      }
-                    />
-                  </div>
-                    ) :
+                        {!currentDogs.length > 0 ? (
+                            <div className={style.div}>
+                                <p className={style.loading}>Loading...</p>
+                                    <img
+                                        src={
+                                        "https://i0.wp.com/thumbs.gfycat.com/ThankfulPlushAtlanticspadefish-max-1mb.gif"
+                                        }
+                                    />
+                            </div>
+                        ) :
                         currentDogs.map((d) => {
                             return (
                                 <div key={d.id} className={style.card}>
@@ -172,15 +175,14 @@ export default function Home() {
                                             }
                                             temperament={d.temperament}
                                             max_weight={d.max_weight}
-                                            min_weight={d.min_weight}
-                                            
+                                            min_weight={d.min_weight}                          
                                         />
                                     </Link>
                                 </div>
                             );
                         })}
                     </ul>
-            </div>
+                </div>
         </div>
     );
 }
