@@ -20,6 +20,7 @@ export default function DogDetail() {
 
   return (
     <div className={style.container}>
+      {/* <div className={style.wrap}> */}
       <Link to="/home">
         <button className={style.btn_home}>Back to Home</button>
       </Link>
@@ -83,5 +84,6 @@ export default function DogDetail() {
         </div>
       )}
     </div>
+  // </div>
   );
 }

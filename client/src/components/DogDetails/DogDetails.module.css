@@ -1,4 +1,3 @@
-
 .container {
   background-repeat: no-repeat;
   background: url("../../img/bg_Details.png");
@@ -9,9 +8,20 @@
   width: 100%;
 }
 
+/*Efecto blur a todo el background, por ahora no lo uso*/
+/* .wrap{  */
+  /* background-color: #fff; */
+  /* padding: 2rem 3rem;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 25px #222;
+  backdrop-filter: blur(10px);
+} */
+
 
 .title {
-  font-size: 2.8125rem;
+  font-size: 2.375em;
   font-family: "Sniglet", cursive;
   margin: 0.3em;
   color: rgba(60, 56, 45, 0.94);
@@ -23,26 +33,28 @@
 .text {
   margin: auto;
   padding: auto;
-  color: rgb(60, 68, 66);
-  font-size: 1.2em;
+  color:  rgb(38, 36, 36);
+  font-size: 1.1875em;
   padding: 2%;
   font-family: 'Fredoka ', cursive;
 }
 
 
 .card {
-  background-color: rgb(228, 210, 203);
-  width: 50%;
-  height: 87%;
+  background-color: rgb(194, 169, 152);
+  box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
+  width: 45%;
+  height: 75%;
   margin: auto;
+  margin-top: 1.5625em;
   border-radius: 15px;
   overflow: auto;
 } 
 
 
 .img {
-  width: 50%;
-  height: 50%;
+  width: 45%;
+  height: 45%;
   border-radius: 15px;
 } 
 
@@ -50,19 +62,20 @@
 .btn_createDog {
   width: 10%;
   background-color: rgb(159, 143, 123);
-  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
+  color: rgb(38, 36, 36);
   padding: 10px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin: 1%;
+  margin: 1.5%;
   font-family: "Sniglet", cursive;
-  font-size: 17px;
+  font-size: 1.0625em;
 }
 
 
 .btn_createDog:hover {
-  background-color: rgb(163, 132, 92);
+  background-color: rgb(179, 145, 103);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -71,19 +84,20 @@
 .btn_home {
   width: 10%;
   background-color: rgb(159, 143, 123);
-  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
+  color:  rgb(38, 36, 36);
   padding: 10px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin: 1%;
   font-family: "Sniglet", cursive;
-  font-size: 17px;
+  font-size: 1.0625em;
 }
 
 
 .btn_home:hover {
-  background-color: rgb(163, 132, 92);
+  background-color: rgb(179, 145, 103);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -103,7 +117,7 @@
  align-items: center;
  flex-direction: row-reverse;
  justify-content: stretch;
- margin: 3%;
+ margin: 2%; /*padding del titulo*/
  padding: auto;
 }
 
@@ -133,7 +147,7 @@
 
   .img {
     width: 60%;
-    height: 35%;
+    height: 33%;
     margin: 10px 0px 20px 0px;
   }
 
@@ -141,7 +155,7 @@
     margin-top: 6%;
     width: 80%;
     height: 80%;
-    background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(212, 177, 146, 0.671);
   }
 
   .title {
@@ -161,16 +175,16 @@
     width: 30%;
     height: 4%;
     margin-top: 10%;
-    font-size: 16px;
-    padding: 5px 5px;
+    font-size: 1em;
+    padding: 2px 5px;
   }
 
   .btn_createDog {
     width: 30%;
     height: 4%;
     margin: 3%;
-    font-size: 16px;
-    padding: 5px 5px;
+    font-size: 1em;
+    padding: 2px 5px;
   }
   
 }

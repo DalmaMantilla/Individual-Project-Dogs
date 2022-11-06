@@ -111,8 +111,8 @@ export default function Home() {
                         <option value='weightasc'>Heavier</option>
                         <option value='weightdesc'>Lighter</option>
                     </select>
-                </div>
-                {/*------------------- FILTRAR-----------------------*/}
+                
+                    {/*------------------- FILTRAR-----------------------*/}
                 <div className={style.row2}>
                     <select className={style.select} onChange={(e) => handleFilterByTemperament(e)}>
                         <option hidden>
@@ -132,6 +132,8 @@ export default function Home() {
                         <option value="created">By Database</option>
                     </select>
                 </div>
+                </div>
+        
                 <button className={style.btn_reload} onClick={(e) => handleClick(e)}> 
                     Reload Dogs
                 </button>

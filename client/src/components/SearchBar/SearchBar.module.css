@@ -1,36 +1,51 @@
 .nav {
-    margin: 30px 30px 55px 30px;
+    margin: 30px 3px 55px 3px;
     display: inline-block;
     position: center;
-    height: 20px;
-    padding: 0;
+    height: 1px;
+    padding: 0; 
 }
 
+
 .input {
-    padding: 6px 6px;
-    margin-top: 8px;
-    font-size: 20px;
+    width: 200px;
+    margin-top: -25px;
+    padding: 6px 10px;
+    font-size: 15px;
+    border-radius: 5px;
     border: none;
-    font: 1vw/1.6 'Acme', sans-serif;
+    font-family: "Sniglet", cursive;
+    outline: 0;
+    background-color:rgba(255, 255, 255, 0.678);
+    box-shadow: 0px 0px 6px 0px rgba(53, 53, 53, 0.5);
 }
+
 
 .input:active {
     border: #ddd;
-    color: white;
+    color: white; 
 }
 
-.btn {
+
+.btn_lupa {
     float: right;
-    padding: 11px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: burlywood;
-    font-size: 160x;
+    background: none;
+    font-size: 20px;
     border: none;
     cursor: pointer;
+    margin-top: -2px;
 }
 
-.btn:hover {    
-    background-color: rgb(156, 130, 96);;
+
+.btn_lupa:hover {    
     transform: scale(1.1);
+} 
+
+
+@media only screen and (max-width: 650px) {
+    .nav {
+       
+        display: flex;
+       
+    }
 }

@@ -9,9 +9,10 @@ export default function Header() {
     <header>
       <div className={s.header}>
         <NavLink to="/">
+          <p className={s.text}>Inicio</p>
         </NavLink>
         <NavLink to="/">
-          <p className={s.text}>Inicio</p>
+          <p className={s.text}>Home</p>
         </NavLink>
         <NavLink to="/post">
           <p className={s.text}>Create Dog</p>
