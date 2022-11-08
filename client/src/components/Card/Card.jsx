@@ -1,6 +1,5 @@
 import React from "react";
 import style from "../Card/Card.module.css";
-import { Link } from "react-router-dom";
 import img from "../../img/dogcreated.png";
 
 export default function Card ({ id, image, name, min_weight, max_weight, temperament }) {

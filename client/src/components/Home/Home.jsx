@@ -114,7 +114,7 @@ export default function Home() {
                 
                 {/*------------------- FILTRAR-----------------------*/}
                 {/* <div className={style.row2}> */}
-                <div className={style.row2}>
+                <div>
                     <select className={style.select} onChange={(e) => handleFilterByTemperament(e)}>
                         <option hidden>
                             Filter by Temperament
@@ -175,7 +175,7 @@ export default function Home() {
                                             }
                                             temperament={d.temperament}
                                             max_weight={d.max_weight}
-                                            min_weight={d.min_weight}                          
+                                            min_weight={d.min_weight}        
                                         />
                                     </Link>
                                 </div>

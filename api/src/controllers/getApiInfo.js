@@ -13,7 +13,7 @@ const getApiInfo = async (req, res, next) => {
                 id: e.id,
                 name: e.name,
                 min_height: e.height.metric.split(" - ")[0] && e.height.metric.split(" - ")[0],
-                min_height: e.height.metric.split(" - ")[1] && e.height.metric.split(" - ")[1],
+                max_height: e.height.metric.split(" - ")[1] && e.height.metric.split(" - ")[1],
                 // weight_min: e.weight.metric.split(" - ")[0] !== "NaN" 
                 //             ? e.weight.metric.split(" - ")[0]
                 //             : 6,
@@ -23,7 +23,7 @@ const getApiInfo = async (req, res, next) => {
                 // life_time_max: e.life_span.split(" - ")[1] && e.life_span.split(" - ")[1],
                 life_span: e.life_span,
                 temperament: e.temperament ? e.temperament : null,
-                
+               
                 image: e.image.url,
             }
         });

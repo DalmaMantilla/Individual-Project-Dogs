@@ -5,7 +5,7 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('dog', {
     id: {
-        type: DataTypes.UUID, 
+        type: DataTypes.UUID, //Sequelize genera un id de tipo UUID(numero random con letras y numeros, unico q no se repite). Es un tipo de dato de sequelize
         allowNull: false, 
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
@@ -31,14 +31,14 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         //allowNull: false,
     },
-    life_time_min: {
-        type: DataTypes.STRING,
-        //allowNull: true,
-    },
-    life_time_max: {
-        type: DataTypes.STRING,
-        //allowNull: true,
-    },
+    // life_time_min: {
+    //     type: DataTypes.STRING,
+    //     //allowNull: true,
+    // },
+    // life_time_max: {
+    //     type: DataTypes.STRING,
+    //     //allowNull: true,
+    // },
     life_span: {
       type: DataTypes.STRING,
      
@@ -47,10 +47,10 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
       //allowNull: true,
     },
-    createdInDb: {
+    createdInDb: { // Todos los perros q cree en mi DB se crearan con esta propiedad,todos los demas no la tendran. 
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue: true,
+      defaultValue: true, //x defecto true, se crearan con esta prop.
     },
   },
     {timestamps: false} //sequelize NO agregue los 2 atributos por defecto: createdAt y updatedAt.

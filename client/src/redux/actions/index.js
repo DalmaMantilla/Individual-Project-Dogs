@@ -34,8 +34,7 @@ export function getDetail (id) {
             return dispatch ({
                 type: "GET_DETAILS",
                 payload: json.data,
-            })
-             
+            })        
         }
         catch(error) {
             console.log(error)
@@ -68,19 +67,30 @@ export function searchDogs(search) {
                 title: 'Dog no found!',
                 width: 300,    
               })
-              
         })
     }
 }
    
 
-export function postDog (payload) {
-    return async function(dispatch) {
-        const response = await axios.post("/createDogs", payload);
-        //console.log("soy", response.temperament[1])
-        return response;
-    }
-}
+// export function postDog (payload) {
+//     return async function(dispatch) {
+//         const response = await axios.post("/createDogs", payload);
+//         //console.log("soy", response.temperament[1])
+//         return response;
+        
+//     }
+// }
+
+export const postDog = (payload) => {
+    return async (dispatch) => {
+      try {
+        const json = await axios.post("/createDog", payload);
+        return json;
+      } catch (error) {
+        return { error: error.message};
+      }
+    };
+  };
 
 
 //-------ORDER----------------------------------------

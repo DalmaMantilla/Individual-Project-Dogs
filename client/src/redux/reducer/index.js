@@ -27,8 +27,7 @@ function rootReducer(state=initialState, action){
             return{
                 ...state,
                 detail: action.payload
-            };
-            
+            }; 
         case "GET_CLEAN":
             return{
                 ...state,
@@ -76,8 +75,8 @@ function rootReducer(state=initialState, action){
         case "FILTER_CREATED":
             const allDogsCreated = state.allDogs;
             const createdFilter = action.payload === 'created' ? 
-            allDogsCreated.filter(el => el.userCreated)
-            : allDogsCreated.filter(el => !el.userCreated)
+            allDogsCreated.filter(el => el.createdInDb)
+            : allDogsCreated.filter(el => !el.createdInDb)
             //console.log(allDogs)
             return {
                 ...state,

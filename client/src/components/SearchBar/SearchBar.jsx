@@ -22,10 +22,6 @@ function onInputChange(e) {
     console.log(search)
 }
 
-function mostrar(){
-    window.alert("pero no encontrado")
-}
-
 
     return (
         <div className={style.nav}>
@@ -45,7 +41,6 @@ function mostrar(){
                 className={style.btn_lupa} 
                 type='submit' 
                 value='🔍' 
-                onClick='mostrar()'
             />
             </form>
         </div>

@@ -61,7 +61,7 @@ dogsRoutes.post("/createDog", async (req, res, next) => {
         min_weight, 
         max_weight,
         life_span,
-        temperament, //buscar donde estan todos los temperametos 
+        temperament, //elegir uno o varios de los temperamentos de la api
         createdInDb,
     } = req.body;
     //console.log(req.body, 'DEBEN LLEGAR DEL BODY')
@@ -71,13 +71,13 @@ dogsRoutes.post("/createDog", async (req, res, next) => {
     }
     try {
         let dogCreated = await Dog.create({
-            name,
+            name, //le paso los mismos atributos del modelo porque lo voy a agregar a la base de datos  
             min_height,
             max_height,
             min_weight, 
             max_weight,
             life_span,
-            createdInDb: true  
+            createdInDb
           });
         console.log(dogCreated, 'PERRO CREADO')
         
@@ -86,7 +86,7 @@ dogsRoutes.post("/createDog", async (req, res, next) => {
                 name: temperament
             }
         });
-        console.log(temperamentDb, 'TEMPERAMENTOOOOOS')
+        //console.log(temperamentDb, 'TEMPERAMENTOOOOOS')
         dogCreated.addTemperament(temperamentDb);
         res.status(200).send('Raza creada con éxito')
     

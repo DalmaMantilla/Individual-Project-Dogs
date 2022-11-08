@@ -14,7 +14,7 @@ export default function Header() {
         <NavLink to="/home">
           <p className={style.text}>Home</p>
         </NavLink>
-        <NavLink to="/post">
+        <NavLink to="/createDog">
           <p className={style.text}>Create Dog</p>
         </NavLink>
 

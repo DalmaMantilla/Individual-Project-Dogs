@@ -37,7 +37,7 @@ a {
   box-sizing: border-box;
   font-family: "Sniglet", cursive;
   font-size: 14.5px;
-  background-color:rgba(255, 255, 255, 0.678);
+  background-color:rgba(250, 246, 246, 0.916);
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
   color: rgb(47, 38, 34);
   outline: 0; /*quita bordes dentro del select*/

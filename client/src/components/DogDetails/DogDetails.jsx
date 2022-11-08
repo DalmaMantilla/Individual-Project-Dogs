@@ -9,6 +9,7 @@ export default function DogDetail() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const myDog = useSelector((state) => state.detail);
+  const allDogs = useSelector((state) => state.dogs)
  
   useEffect(() => {
     dispatch(getDetail(id));
@@ -29,7 +30,7 @@ export default function DogDetail() {
       </Link>
       {myDog.length > 0 ? (
         <div className={style.card}>
-          <div className={style.edit}>
+          {/* <div className={style.edit}>
             <div>
               {myDog[0].createdInDb ? (
                 <Link to="/delete/:id">
@@ -44,7 +45,7 @@ export default function DogDetail() {
                 </Link>
               ) : null}
             </div>
-          </div>
+          </div> */}
           <h1 className={style.title}>{myDog[0].name}</h1>
           <img
             className={style.img}
