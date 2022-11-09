@@ -1,19 +1,21 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { postDog, getTemperaments, getDogs } from "../../redux/actions";
+import { postDog, getTemperaments, getDogs} from "../../redux/actions";
 import ButtonForm from "../ButtonForm/ButtonForm";
 import AlertForm from "../AlertForm/AlertForm";
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 import DoubleInput from "../DoubleInput/DoubleInput";
 import SelectTemperamentsForm from "../SelectTemperamentsForm/SelectTemperamentsForm";
 import style from "../DogCreate/DogCreate.module.css";
 
 
+
 export default function DogCreate() {
   const dispatch = useDispatch();
   const temperament = useSelector((state) => state.temperaments);
-  const dogs = useSelector((state) => state.allDogs);
+  const dogs = useSelector((state) => state.dogs);
   const dogsName = dogs.map((d) => d.name);
 
 
@@ -231,9 +233,12 @@ export default function DogCreate() {
         {(input.error || input.success) && (
           <AlertForm input={input} onClose={onClose} />
         )}
-        <div className={style.header}>
-          <Header />
-        </div>
+        {/* <div className={style.header}>
+          <Header/>
+        </div> */}
+        <Link to="/home">
+          <button className={style.btn_home}>Back to Home</button>
+        </Link>
         <div className={style.main}>
           <section className={style.section_form}>
             <h1 className={style.title}>CREATE YOUR DOG</h1>
@@ -292,7 +297,7 @@ export default function DogCreate() {
                   handleRemove={handleRemove}
                 />
               </div>
-              <div className={style.button_div}>
+              <div className={style.button_create}>
                 <ButtonForm type={"submit"} text={"CREATE"} />
               </div>
             </form>

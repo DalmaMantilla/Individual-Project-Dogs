@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../DoubleInput/DoubleInput.module.css";
 
-const DoubleInput = ({ value, setState, label }) => {
+export default function DoubleInput ({ value, setState, label }) {
   return (
     <>
       <label>{label}: </label>
@@ -15,10 +15,9 @@ const DoubleInput = ({ value, setState, label }) => {
           value={value.min}
           autoComplete={"off"}
           required
-          onChange={(e) => ({ ...value, min: e.target.value })}
-        />
-          {" "}
-          -{" "}
+          onChange={(e) => setState({ ...value, min: e.target.value })}
+        />{" "}
+        -{" "}
         <input
           className={style.input}
           type="number"
@@ -35,4 +34,4 @@ const DoubleInput = ({ value, setState, label }) => {
   );
 };
 
-export default DoubleInput;
+

@@ -1,7 +1,7 @@
 
 const initialState = {
-    dogs: [],
-    allDogs: [],
+    dogs: [],//Tiene todos los perritos
+    allDogs: [], //Copia de todos los perritos, este se filtrara.
     temperaments: [],
     detail: []
 }
@@ -13,8 +13,8 @@ function rootReducer(state=initialState, action){
         case 'GET_DOGS':
             return { //retorna un nuevo estado
                 ...state,
-                dogs: action.payload, //tiene todos los perritos
-                allDogs: action.payload //copia de todos los perritos, este se filtrara
+                dogs: action.payload, 
+                allDogs: action.payload 
             };
         
         case "GET_TEMPERAMENTS":

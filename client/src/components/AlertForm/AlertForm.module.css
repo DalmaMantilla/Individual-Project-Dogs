@@ -18,9 +18,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5em 2em;
-  /* margin-left: 8em; */
-  margin-bottom: 10em;
+  padding: 1.5rem 2rem;
+  margin-top: -18.75rem;
   border-radius: 0.5em;
 }
 
@@ -29,3 +28,20 @@
   font-size: 1.3em;
   margin-top: 1.2em;
 }
+
+
+@media only screen and (max-width: 40.625rem) {
+  .container {
+    padding: .9375rem 2em;
+    margin-bottom: 8.125rem;
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+  }
+  
+  .bg_negro {
+    height: 110%;
+    width: 100%;
+  }
+ 
+  
+} 
