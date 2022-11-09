@@ -34,7 +34,7 @@
 
 .button:hover:before {
   width: 100%;
-  background: rgba(84, 139, 74, 0.803);
+  background: rgba(105, 218, 88, 0.803);
   box-shadow: 0px 0px 6px 0px rgba(86, 84, 84, 0.5);
 }
 

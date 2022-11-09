@@ -1,0 +1,94 @@
+.container {
+    background-image: url('../img/bg_About.png');
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+  }
+
+
+.about {
+    width: 50%;
+    height: 70%;
+    margin-left: 38.125em;
+    margin-top: 6.25em;
+    border-radius: .9375em;
+}
+  
+
+.btn_home {
+    width: 10%;
+    background-color: rgb(179, 145, 103);
+    box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
+    color:  rgb(38, 36, 36);
+    padding: .625em .625em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1%;
+    margin-left: 34.375em;
+    font-family: "Sniglet", cursive;
+    font-size: 1.0625em;
+  }
+  
+  
+.btn_home:hover {
+    background-color: rgb(159, 143, 123);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.cont_img {
+    margin-left: 16.875em;
+    margin-top: 3.125em;
+    display: flex;
+}
+
+.img {
+    padding: 1%;
+}
+  
+
+.img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+  
+
+.text {
+    font-family: 'Fredoka ', cursive;
+    color: rgba(60, 56, 45, 0.94);
+    font-size: 1.25em;
+    padding: 2%;
+}
+  
+
+@media only screen and (max-width: 40.625rem) {
+   
+    .container {
+        position: fixed; 
+        background: url('../img/bg_About_Responsive.png');
+    }
+
+    .btn_home {
+        width: 30%;
+        margin: 8%;
+        font-size: .9375rem;
+    }
+    
+    .text {
+        font-size: 1.125rem;
+    }
+
+    .about {
+        width: 80%;
+        margin: 7.5rem auto;
+    }
+
+    .cont_img {
+        margin-top: 3.125rem;
+        margin-left: 5.625rem;
+        display: flex;
+    }
+    
+  } 

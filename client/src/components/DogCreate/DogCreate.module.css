@@ -6,7 +6,7 @@
 
 .container {
   background-repeat: no-repeat;
-  background: url(../../img/bg_DogCreate.jpg);
+  background: url(../../img/bg_DogCreate.png);
   background-size: cover;
   position: absolute;
   overflow-y: scroll;
@@ -39,7 +39,7 @@
 .section_form {
   display: flex;
   flex-direction: column;
-  background-color: rgba(245, 245, 245, 0.5);
+  background-color: rgba(244, 240, 237, 0.64);
   backdrop-filter: blur(.1875rem);
   box-shadow: 0rem 0rem .625rem rgba(0, 0, 0, 0.2);
   padding-bottom: 2em;
@@ -92,8 +92,8 @@
 
 .btn_home {
   width: 10%;
-  background-color: rgb(159, 143, 123);
-  box-shadow: 0px 0px 6px 0px rgb(83, 81, 81);
+  background-color: rgb(174, 152, 126);
+  box-shadow: 0px 0px 6px 0px rgb(125, 119, 119);
   color:  rgb(38, 36, 36);
   padding: 10px 10px;
   border: none;
@@ -106,7 +106,7 @@
   
 
 .btn_home:hover {
-  background-color: rgb(179, 145, 103);
+  background: rgba(105, 218, 88, 0.803);
   transform: scale(1.1);
   cursor: pointer;
 }
