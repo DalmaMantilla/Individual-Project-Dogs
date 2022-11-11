@@ -1,10 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, React } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { postDog, getTemperaments, getDogs} from "../../redux/actions";
 import ButtonForm from "../ButtonForm/ButtonForm";
 import AlertForm from "../AlertForm/AlertForm";
-// import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 import DoubleInput from "../DoubleInput/DoubleInput";
 import SelectTemperamentsForm from "../SelectTemperamentsForm/SelectTemperamentsForm";
@@ -154,7 +152,7 @@ export default function DogCreate() {
   };
 
 
-  //----------Agrega temp limitando su cantidad----------
+//----------Agrega temp limitando su cantidad----------
   const handleAddTemp = (e) => {
     if (tempsSelected.length > 5) {
       return setInput({
@@ -162,14 +160,15 @@ export default function DogCreate() {
         error: true,
         success: false,
       });
-    }
-    if (e.target.value === "select") return;
+    } 
+
+    if (e.target.value === 'all') return;
     for (const key of tempsSelected) {
       if (key.temperament === e.target.value) return;
     }
-    setTempsSelected([...tempsSelected, e.target.value]);
+    setTempsSelected([...tempsSelected, e.target.value]);    
   };
-
+ 
 
   //---------Elimino temperamentos----------
   const handleRemove = (e) => {
@@ -191,7 +190,9 @@ export default function DogCreate() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) return;
+    
     const finalLifeSpan = `${life_span.min} - ${life_span.max} years`;
+    
     const dataDog = {
       name,
       min_height: height.min,
@@ -201,8 +202,9 @@ export default function DogCreate() {
       image,
       life_span: finalLifeSpan,
       temperament: tempsSelected,
-    };
+    }; 
     const res = dispatch(postDog(dataDog));
+
     if (res.error) {
       return setInput({
         text: res.error,
@@ -233,9 +235,7 @@ export default function DogCreate() {
         {(input.error || input.success) && (
           <AlertForm input={input} onClose={onClose} />
         )}
-        {/* <div className={style.header}>
-          <Header/>
-        </div> */}
+      
         <Link to="/home">
           <button className={style.btn_home}>Back to Home</button>
         </Link>
@@ -293,7 +293,7 @@ export default function DogCreate() {
                 <SelectTemperamentsForm
                   temperament={temperament}
                   tempsSelected={tempsSelected}
-                  handleAdd={handleAddTemp}
+                  handleAddTemp={handleAddTemp}
                   handleRemove={handleRemove}
                 />
               </div>
@@ -307,6 +307,4 @@ export default function DogCreate() {
     </>
   );
 };
-
-
 

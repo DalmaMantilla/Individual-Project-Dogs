@@ -57,12 +57,12 @@
 
 @media only screen and (max-width: 40.625rem) {
   
-.temperaments {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px -50px;
-  padding-top: 15px 5px;
-  width: 350px;
-  font-family: cursive;
-}
+  .temperaments {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -50px;
+    padding-top: 15px 5px;
+    width: 350px;
+    font-family: cursive;
+  }
 } 

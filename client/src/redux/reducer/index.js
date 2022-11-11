@@ -60,7 +60,7 @@ function rootReducer(state=initialState, action){
             }
 
         case "ORDER_BY_WEIGHT":
-            let sortWeight = action.payload === 'weightasc' ?      
+            let sortWeight = action.payload === 'max weight' ?      
             state.dogs.sort(function (a, b){  
                 return b.min_weight - a.min_weight;
             }) :
@@ -71,7 +71,7 @@ function rootReducer(state=initialState, action){
             ...state,
             dogs: sortWeight
             }
-    
+
         case "FILTER_CREATED":
             const allDogsCreated = state.allDogs;
             const createdFilter = action.payload === 'created' ? 
@@ -86,7 +86,7 @@ function rootReducer(state=initialState, action){
         case "FILTER_TEMPERAMENT":
             const allDogs = state.allDogs;
             const temperamentsFilter = action.payload === "all" ?
-            allDogs : allDogs.filter(el => {
+            allDogs : allDogs.filter((el) => {
                 return el.temperament?.split(", ").includes(action.payload)
             })
             // console.log('AQUI ESTAN LOS PÑERROS', allDogs)

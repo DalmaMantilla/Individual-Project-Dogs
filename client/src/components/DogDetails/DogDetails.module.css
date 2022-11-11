@@ -105,12 +105,11 @@
 
 .loading {
   font: bold 7.5vw/1.6 "Acme", sans-serif;
-  color: white;
+  color: rgb(95, 79, 68);
   font-size: 50px;
   letter-spacing: 5px;
-  text-shadow: -1px -1px 0px #f4511e, 3px 3px 0px gainsboro, 6px 6px 0px teal;
+  text-shadow: -1px -1px 0px #2e2928, 3px 3px 0px rgb(183, 143, 143), 6px 6px 0px rgb(243, 239, 212);
 }
-
 
 .edit {
  display: flex;

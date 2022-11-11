@@ -1,8 +1,9 @@
 import React from "react";
-import style from "../Card/Card.module.css";
+import style from "../DogCard/DogCard.module.css";
 import img from "../../img/dogcreated.png";
 
-export default function Card ({ id, image, name, min_weight, max_weight, temperament }) {
+export default function DogCard ({ id, image, name, min_weight, max_weight, temperament }) {
+ 
   return (
     <> 
         <div className={style.container}>
@@ -19,7 +20,7 @@ export default function Card ({ id, image, name, min_weight, max_weight, tempera
               <div className={style.back}>
                 {!temperament ? (
                   <p className={style.description}>
-                    <b>Temperament:</b> Not found
+                    {/* <b>Temperament:</b> Not found */}
                   </p>
                 ) : (
                   <p className={style.description}>

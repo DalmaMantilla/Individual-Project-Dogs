@@ -4,19 +4,20 @@ import style from "../SelectTemperamentsForm/SelectTemperamentsForm.module.css";
 export default function SelectTemperamentsForm({
   temperament,
   tempsSelected,
-  handleAdd,
+  handleAddTemp,
   handleRemove,
 }) {
+  
   return (
     <>
       <div>
         <label htmlFor="temperament">Temperaments: </label>
-        <select className={style.input} name="temperament" onChange={handleAdd}>
-          <option value="select">All</option>
+        <select className={style.input} name="temperament" onChange={handleAddTemp}>
+          <option value="all">All</option>
           {temperament.length > 0 &&
-            temperament.map((t) => (
-              <option key={t.id} value={t.name}>
-                {t.name}
+            temperament.map((temp) => (
+              <option value={temp.name} key={temp.id} >
+                {temp.name}
               </option>
             ))}
         </select>
