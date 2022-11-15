@@ -9,9 +9,9 @@ export default function LandingPage(){
       <div className={style.bg_container}>
           <section className={style.section}>
             <h1 className={style.title}>WELCOME</h1>
-            <h1 className={style.title}>TO MY</h1>
-            <h1 className={style.title}>INDIVIDUAL PROJECT</h1>
-            <h1 className={style.title}>DOGS</h1>
+            <h1 className={style.title}>TO </h1>
+            <h1 className={style.title}>PET SHOP</h1>
+            <h1 className={style.title}>THE PARADISE OF DOGS</h1>
             <Link to={"/home"} className={style.buttonlink}>
               <button data-text="Awesome" className={style.button}>
                 <span className={style.actual_text}>&nbsp;HOME&nbsp;</span>
