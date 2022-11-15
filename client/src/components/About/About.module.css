@@ -1,5 +1,5 @@
 .container {
-    background-image: url('../img/bg_About.png');
+    background-image: url('../../img/bg_About.png');
     height: 100vh;
     width: 100%;
     overflow: auto;
@@ -20,11 +20,11 @@
     background-color: rgb(179, 145, 103);
     box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
     color:  rgb(38, 36, 36);
-    padding: .625em .625em;
+    padding: .625rem .625em;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin: 1%;
+    margin: 3%;
     margin-left: 34.375em;
     font-family: "Sniglet", cursive;
     font-size: 1.0625em;
@@ -56,10 +56,12 @@
   
 
 .text {
-    font-family: 'Fredoka ', cursive;
+    margin-top: -25px;
+    font-family: "Sniglet", cursive;
     color: rgba(60, 56, 45, 0.94);
     font-size: 1.25em;
-    padding: 2%;
+    line-height: 2rem;
+  
 }
   
 
@@ -67,7 +69,7 @@
    
     .container {
         position: fixed; 
-        background: url('../img/bg_About_Responsive.png');
+        background: url('../../img/bg_About_Responsive.png');
     }
 
     .btn_home {

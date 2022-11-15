@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import github from "../img/github.png";
-import linkedIn from "../img/linkedIn.png";
+import github from "../../img/github.png";
+import linkedIn from "../../img/linkedIn.png";
 import style from "../About/About.module.css";
 
 export default function About() {
@@ -12,14 +12,17 @@ export default function About() {
         </NavLink>
      
         <div className={style.about}>
-            <h1 className={style.text}>Hello there!</h1>
             <h3 className={style.text}>
-                Im Dalma, a Full Stack Developer! 
-                <br />
-                DOGS, is an app made as an individual project during the "Soy Henry" course. If you want to know more details visit the readme
-                <br />
+              Welcome!
+              <br/>
+              Here at Dogs, we make sure you know everything about your pup. We are 
+              experts in taking care of your dog, obtaining the data you need and 
+              presenting it to you in the best possible way. In a simple way, we allow you
+              to filter, sort and even randomize your search for it. Do you think we are
+              missing a breed? You can send it! We are proud to provide a reliable database to users.
+              <br/>
+              Let's connect!
             </h3>
-            <h3 className={style.text}>Let's connect!</h3>
             <div className={style.cont_img}>
             <a href="https://github.com/DalmaMantilla">
             {" "}
