@@ -53,24 +53,24 @@ export default function DogDetail() {
             src={
               myDog[0].image
                 ? myDog[0].image
-                : "https://pm1.narvii.com/6893/724dede9a107e0d420269799b4efe8be26a88df9r1-842-1024v2_00.jpg"
+                : "https://images2-mega.cdn.mdstrm.com/meganoticias/2021/02/16/gen,-el-corgi-de-los-memes_327396_1_602be33018e81.jpg?d=950x535"
             }
           />
           <p className={style.text}>
             {!myDog[0].life_time_max
-              ? `♥ Their life span is approximately → [ ${myDog[0].life_span} ]`
+              ? `♥ Their life span is approximately: [ ${myDog[0].life_span} ]`
               : ``}{" "}
             <br />
-            ♥ Their temperaments are{" "}
-            → [ {!myDog[0].createdInDb
+            ♥ Their temperaments are:{" "}
+             [ {!myDog[0].createdInDb
               ? myDog[0].temperament + " "
               : myDog[0].temperaments.map((el) => el.name + ", ")} ]
              <br />
             {!myDog[0].height_max
-              ? ` ♥ These dogs can measure up to → [ ${myDog[0].min_height} cm ] approximately`
+              ? ` ♥ These dogs can measure up to: [ ${myDog[0].min_height} cm ] approximately`
               : ` ♥ These dogs can measure between ${myDog[0].min_height} and ${myDog[0].max_height_max} cm.`}{" "}
             <br />
-            and weight between → [ {myDog[0].min_weight} and {myDog[0].max_weight}{" "} kg ]
+            and weight between: [ {myDog[0].min_weight} and {myDog[0].max_weight}{" "} kg ]
          
           </p>
         </div>

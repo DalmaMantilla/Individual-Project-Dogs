@@ -7,6 +7,9 @@ export default function SelectTemperamentsForm({
   handleAddTemp,
   handleRemove,
 }) {
+  console.log('Temperamentos seleccionados', tempsSelected)
+  console.log('Temperamentos traidos del estado', temperament)
+  console.log('Temperamentos agregados pára mostrar',handleAddTemp)
   
   return (
     <>
@@ -24,8 +27,8 @@ export default function SelectTemperamentsForm({
       </div>
       {tempsSelected.length > 0 && (
         <div className={style.temperaments}>
-          {tempsSelected.map((t) => (
-            <span key={t} className={style.selected}>
+          {tempsSelected && tempsSelected.map((t) => (
+            <span key={t} value={t} className={style.selected}>
               {t}
               <span
                 className={style.x}

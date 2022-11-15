@@ -60,6 +60,8 @@ dogsRoutes.post("/createDog", async (req, res, next) => {
         max_height,
         min_weight, 
         max_weight,
+        // life_time_min,
+        // life_time_max,
         life_span,
         temperament, //elegir uno o varios de los temperamentos de la api
         createdInDb,
@@ -76,6 +78,8 @@ dogsRoutes.post("/createDog", async (req, res, next) => {
             max_height,
             min_weight, 
             max_weight,
+            // life_time_min,
+            // life_time_max,
             life_span,
             createdInDb
           });

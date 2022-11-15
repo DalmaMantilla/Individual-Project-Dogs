@@ -18,7 +18,7 @@
 .temperaments {
   display: flex;
   flex-wrap: wrap;
-  margin: 0px -50px;
+  margin: 0px -15px;
   padding-top: 15px;
   width: 30em;
   font-family: cursive;
@@ -58,11 +58,11 @@
 @media only screen and (max-width: 40.625rem) {
   
   .temperaments {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px -50px;
-    padding-top: 15px 5px;
-    width: 350px;
-    font-family: cursive;
+    width: 20rem;
+    margin: auto -90px;
+    padding-top: .9375rem;
+    
   }
+
+ 
 } 

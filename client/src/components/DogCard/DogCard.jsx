@@ -1,9 +1,9 @@
 import React from "react";
 import style from "../DogCard/DogCard.module.css";
-import img from "../../img/dogcreated.png";
+
 
 export default function DogCard ({ id, image, name, min_weight, max_weight, temperament }) {
- 
+ console.log('Temperamentos q recibe la card', temperament)
   return (
     <> 
         <div className={style.container}>
@@ -12,13 +12,13 @@ export default function DogCard ({ id, image, name, min_weight, max_weight, temp
               <div className={style.front}>
                 <img
                   className={style.img}
-                  src={image ? image : img}
+                  src={image}
                   alt={`dogs-${name}`}
                 />
                 <p className={style.subtitle}>{name}</p>
               </div>
               <div className={style.back}>
-                {!temperament ? (
+                {!temperament? (
                   <p className={style.description}>
                     {/* <b>Temperament:</b> Not found */}
                   </p>

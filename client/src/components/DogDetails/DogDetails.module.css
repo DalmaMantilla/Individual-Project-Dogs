@@ -11,12 +11,12 @@
 /*Efecto blur a todo el background, por ahora no lo uso*/
 /* .wrap{  */
   /* background-color: #fff; */
-  /* padding: 2rem 3rem;
+  /* padding: 32px 48px;
   text-align: center;
   color: #fff;
-  border: 3px solid #fff;
-  box-shadow: 0px 0px 25px #222;
-  backdrop-filter: blur(10px);
+  border: .1875rem solid #fff;
+  box-shadow: 0rem 0rem 1.5625rem #222;
+  backdrop-filter: blur(.625rem);
 } */
 
 
@@ -25,8 +25,8 @@
   font-family: "Sniglet", cursive;
   margin: 0.3em;
   color: rgba(60, 56, 45, 0.94);
-  text-shadow: -1px 0 rgb(255, 255, 255), 0 0px rgb(255, 255, 255),
-    1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+  text-shadow: -0.0625rem 0 rgb(255, 255, 255), 0 0rem rgb(255, 255, 255),
+    .0625rem 0 rgb(255, 255, 255), 0 -0.0625rem rgb(255, 255, 255);
 }
 
 
@@ -36,18 +36,19 @@
   color:  rgb(38, 36, 36);
   font-size: 1.1875em;
   padding: 2%;
-  font-family: 'Fredoka ', cursive;
+  line-height: 2rem;
+  font-family: "Sniglet", cursive;
 }
 
 
 .card {
   background-color: rgb(194, 169, 152);
-  box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
+  box-shadow: 0rem 0rem .375rem 0rem rgb(252, 251, 251);
   width: 45%;
   height: 75%;
   margin: auto;
   margin-top: 1.5625em;
-  border-radius: 15px;
+  border-radius: .9375rem;
   overflow: auto;
 } 
 
@@ -55,18 +56,18 @@
 .img {
   width: 45%;
   height: 45%;
-  border-radius: 15px;
+  border-radius: .9375rem;
 } 
 
 
 .btn_createDog {
   width: 10%;
   background-color: rgb(159, 143, 123);
-  box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
+  box-shadow: 0rem 0rem .375rem 0rem rgb(252, 251, 251);
   color: rgb(38, 36, 36);
-  padding: 10px 10px;
+  padding: .625rem .625rem;
   border: none;
-  border-radius: 4px;
+  border-radius: .25rem;
   cursor: pointer;
   margin: 1.5%;
   font-family: "Sniglet", cursive;
@@ -84,11 +85,11 @@
 .btn_home {
   width: 10%;
   background-color: rgb(159, 143, 123);
-  box-shadow: 0px 0px 6px 0px rgb(252, 251, 251);
+  box-shadow: 0rem 0rem .375rem 0rem rgb(252, 251, 251);
   color:  rgb(38, 36, 36);
-  padding: 10px 10px;
+  padding: .625rem .625rem;
   border: none;
-  border-radius: 4px;
+  border-radius: .25rem;
   cursor: pointer;
   margin: 1%;
   font-family: "Sniglet", cursive;
@@ -106,9 +107,9 @@
 .loading {
   font: bold 7.5vw/1.6 "Acme", sans-serif;
   color: rgb(95, 79, 68);
-  font-size: 50px;
-  letter-spacing: 5px;
-  text-shadow: -1px -1px 0px #2e2928, 3px 3px 0px rgb(183, 143, 143), 6px 6px 0px rgb(243, 239, 212);
+  font-size: 3.125rem;
+  letter-spacing: .3125rem;
+  text-shadow: -0.0625rem -0.0625rem 0rem #2e2928, .1875rem .1875rem 0rem rgb(183, 143, 143), .375rem .375rem 0rem rgb(243, 239, 212);
 }
 
 .edit {
@@ -125,10 +126,10 @@
   width: 90%;
   background-color: burlywood;
   color: rgb(4, 4, 4);
-  padding: 10px 10px;
+  padding: .625rem .625rem;
   margin: 5%;
   border: none;
-  border-radius: 4px;
+  border-radius: .25rem;
   cursor: pointer;
   margin-bottom: 2%;
   font: 1vw "Acme", sans-serif;
@@ -142,12 +143,12 @@
 }
 
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 40.625rem) {
 
   .img {
     width: 60%;
     height: 33%;
-    margin: 10px 0px 20px 0px;
+    margin: .625rem 0rem 1.25rem 0rem;
   }
 
   .card {
@@ -159,11 +160,12 @@
 
   .title {
     font-size: 1.8em;
-    margin: 0.1em;
+    margin-top: 1.5625rem;
   } 
   
   .text {
-    font-size: 1em;
+    font-size: .875rem;
+    line-height: 1.75rem;
   }
 
   .container {
@@ -175,7 +177,7 @@
     height: 4%;
     margin-top: 10%;
     font-size: 1em;
-    padding: 2px 5px;
+    padding: .125rem .3125rem;
   }
 
   .btn_createDog {
@@ -183,7 +185,12 @@
     height: 4%;
     margin: 3%;
     font-size: 1em;
-    padding: 2px 5px;
+    padding: .125rem .3125rem;
   }
   
+  .loading {
+    font-size: 1.875rem;
+    letter-spacing: .1875rem;
+    
+  }
 }

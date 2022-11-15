@@ -21,6 +21,7 @@ import Filters from "../Filters/Filters";
 export default function Home() {
     const dispatch = useDispatch();
     const allDogs = useSelector((state) => state.dogs)
+   
     
     //----------------PAGINADO----------------------------------------
     const [order, setOrder] = useState("");
@@ -100,7 +101,7 @@ export default function Home() {
                                     src={
                                     "https://i0.wp.com/thumbs.gfycat.com/ThankfulPlushAtlanticspadefish-max-1mb.gif"
                                     }
-                            />
+                                />
                         </div>
                     ) :
                         currentDogs.map((d) => {
@@ -116,10 +117,12 @@ export default function Home() {
                                                 ? d.image
                                                 : "https://images2-mega.cdn.mdstrm.com/meganoticias/2021/02/16/gen,-el-corgi-de-los-memes_327396_1_602be33018e81.jpg?d=950x535"
                                             }
-                                            temperament={d.temperament}
+                                            
+                                            temperament={d.temperament} 
                                             max_weight={d.max_weight}
                                             min_weight={d.min_weight}        
                                         />
+                                        
                                     </Link>
                                 </div>
                             );

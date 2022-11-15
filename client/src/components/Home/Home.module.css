@@ -48,4 +48,11 @@ a {
   .container {
     background-image: url("../../img/bg_Home_Responsive.png");
   }
+
+  .loading { 
+    margin: auto;
+    font-size: 30px;
+    letter-spacing: 3px;
+    
+  }
 }

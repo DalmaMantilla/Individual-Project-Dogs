@@ -80,7 +80,7 @@
   box-shadow: 0px 0px 6px 0px rgba(86, 84, 84, 0.5);
   outline: 0;
 }
-  
+
 
 .button_create {
   display: flex;
@@ -134,10 +134,10 @@
     font-size: .9375rem;
   }
   
-  .section_form {
-    padding-left: 0px;
-    padding-right: 0px;
+  .campo {
+    margin: auto 20px;
+    margin-bottom: 0.8em;
   }
-} 
-
-
+  
+}  
+ 
