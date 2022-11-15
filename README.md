@@ -16,7 +16,7 @@ Frontend:
      ** Redux
      ** Css con diseño responsive.
 Deployment:
-     ** Heroku
+     ** Railway
      ** Vercel
   
  
