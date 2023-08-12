@@ -21,24 +21,3 @@ Deployment:
   
  
 
-# Proyecto individual - Dogs
-
-Dogs, is developed as an Application that makes use of the API https://api.thedogapi.com/v1/breeds, as well as its own database, implemented in PostgreSQL, to store all the user's creations, with the help of an ORM (Sequelize)
-
-The user can obtain a wide variety of races. The actions that can be performed are the following: filter by temperament or origin (Api or Database), sort alphabetically, search for a dog with its exact name, create a dog, you can also access the details of each dog by clicking on he finally has a paginated previous-next.
-
-was developed with:
-Datbase:
-     ** Sequelize
-     ** Postgress
-Backend:
-     ** NodeJs
-     ** ExpressJs
-Frontend:
-     ** React
-     ** Redux
-     ** Css with responsive design.
-Deployment:
-    ** Railway
-    ** Vercel
-   
