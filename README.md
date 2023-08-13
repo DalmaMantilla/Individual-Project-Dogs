@@ -8,7 +8,7 @@ El usuario puede obtener una amplia variedad de razas. Las acciones que se puede
 - ordenar alfabéticamente por nombre
 - ordenar por peso de mayor a menor o viceversa
 - buscar un perro con su nombre exacto
-- crear perfil de un perro
+- crear perfil de un perro ingresando su nombre, peso, altura, entre otros
 - acceder al detalle de cada perro haciendo click en él
 - finalmente cuenta con un paginado previous-next.
 
