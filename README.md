@@ -38,7 +38,22 @@ El usuario puede obtener una amplia variedad de razas.
 - Deployment:
      - Render
      - Vercel
-  
- 
+
+
+<h2> Instalación </h2>
+
+1. Clona este repositorio en tu máquina local.
+   https://github.com/DalmaMantilla/Individual-Project-Dogs.git
+
+2. Navega hasta el directorio del proyecto.
+   cd Individual-Project-Dogs
+
+3. Instala las dependencias utilizando el administrador de paquetes de tu elección.
+   
+   npm install   # Si estás usando npm
+
+   yarn install  # Si estás usando yarn
+
+   
 
 
