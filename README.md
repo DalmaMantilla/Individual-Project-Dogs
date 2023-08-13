@@ -9,6 +9,7 @@ El usuario puede obtener una amplia variedad de razas.
 <br>
 
  <h2> Las acciones a realizar son: </h2>
+ 
 - filtrar por temperamentos u origen (Api o Base de Datos)
 - ordenar alfabéticamente por nombre
 - ordenar por peso de mayor a menor o viceversa
