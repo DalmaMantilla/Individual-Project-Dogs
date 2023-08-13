@@ -13,16 +13,20 @@ El usuario puede obtener una amplia variedad de razas. Las acciones que se puede
 - finalmente cuenta con un paginado previous-next.
 
 Fue desarrollado en:
+
 - Base de datos:
      - Sequelize
      - PostgreSQL
+       
 - Backend:
      - NodeJs
      - ExpressJs
+       
 - Frontend:
      - React
      - Redux
-     - Css con diseño responsive.
+     - CSS con diseño responsive.
+       
 - Deployment:
      - Render
      - Vercel
