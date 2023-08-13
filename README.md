@@ -9,7 +9,7 @@ Dogs, está desarrollado como una Aplicación que hace uso de la API  https://ap
 El usuario puede obtener una amplia variedad de razas. 
 
 
- <h2> Las acciones a realizar son: </h2>
+ <h2> Las acciones que se pueden realizar son: </h2>
  
 - filtrar por temperamentos u origen (Api o Base de Datos)
 - ordenar alfabéticamente por nombre
@@ -43,17 +43,18 @@ El usuario puede obtener una amplia variedad de razas.
 <h2> Instalación </h2>
 
 1. Clona este repositorio en tu máquina local.
-   https://github.com/DalmaMantilla/Individual-Project-Dogs.git
+   - https://github.com/DalmaMantilla/Individual-Project-Dogs.git
 
 2. Navega hasta el directorio del proyecto.
-   cd Individual-Project-Dogs
+   - cd Individual-Project-Dogs
 
 3. Instala las dependencias utilizando el administrador de paquetes de tu elección.
    
-   npm install   # Si estás usando npm
+   - npm install   # Si estás usando npm
 
-   yarn install  # Si estás usando yarn
+   - yarn install  # Si estás usando yarn
 
    
+
 
 
