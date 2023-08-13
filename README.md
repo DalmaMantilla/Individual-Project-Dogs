@@ -1,8 +1,12 @@
 # Proyecto individual - Dogs 
 
-Dogs, está desarrollado como una Aplicación que hace uso de la API  https://api.thedogapi.com/v1/breeds, así como de su propia base de datos implementada en PostgreSQL, para almacenar todas las creaciones del usuario, con la ayuda de un ORM (Sequelize).
+¡Bienvenido a la Aplicación de perros! Este README te proporcionará toda la información necesaria para entender, configurar y utilizar nuestra aplicación.
 
-El usuario puede obtener una amplia variedad de razas. Las acciones que se pueden realizar son las siguientes: 
+# Descripción
+Dogs, está desarrollado como una Aplicación que hace uso de la API  https://api.thedogapi.com/v1/breeds, así como de su propia base de datos implementada en PostgreSQL, para almacenar todas las creaciones del usuario, con la ayuda de un ORM (Sequelize).
+El usuario puede obtener una amplia variedad de razas. 
+
+# Las acciones que se pueden realizar son las siguientes: 
 
 - filtrar por temperamentos u origen (Api o Base de Datos)
 - ordenar alfabéticamente por nombre
@@ -13,7 +17,7 @@ El usuario puede obtener una amplia variedad de razas. Las acciones que se puede
 - finalmente cuenta con un paginado previous-next.
 
 
-Fue desarrollado en:
+# Fue desarrollado con:
 
 - Base de datos:
      - Sequelize
