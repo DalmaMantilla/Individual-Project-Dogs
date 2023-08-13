@@ -50,9 +50,9 @@ El usuario puede obtener una amplia variedad de razas.
 
 3. Instala las dependencias utilizando el administrador de paquetes de tu elección.
    
-   - npm install   # Si estás usando npm
+   - npm install    # Si estás usando npm
 
-   - yarn install  # Si estás usando yarn
+   - yarn install   # Si estás usando yarn
 
    
 
