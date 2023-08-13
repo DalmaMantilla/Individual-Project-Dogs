@@ -4,6 +4,7 @@
 <br>
 
 <h2>Descripción</h2> 
+
 Dogs, está desarrollado como una Aplicación que hace uso de la API  https://api.thedogapi.com/v1/breeds, así como de su propia base de datos implementada en PostgreSQL, para almacenar todas las creaciones del usuario, con la ayuda de un ORM (Sequelize).
 El usuario puede obtener una amplia variedad de razas. 
 <br>
