@@ -6,12 +6,11 @@ El usuario puede obtener una amplia variedad de razas. Las acciones que se puede
 
 - filtrar por temperamentos u origen (Api o Base de Datos)
 - ordenar alfabéticamente por nombre
-- ordenar por peso de mayor a menor
+- ordenar por peso de mayor a menor o viceversa
 - buscar un perro con su nombre exacto
 - crear perfil de un perro
 - acceder al detalle de cada perro haciendo click en él
 - finalmente cuenta con un paginado previous-next.
-
 
 
 Fue desarrollado en:
